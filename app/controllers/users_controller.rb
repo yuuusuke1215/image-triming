@@ -13,6 +13,10 @@ class UsersController < ApplicationController
 
   def create
     if @user.save
+      session[:crop_x] = user_params[:x]
+      session[:crop_y] = user_params[:y]
+      session[:crop_width] = user_params[:width]
+      session[:crop_height] = user_params[:height]
       flash[:success] = 'ユーザを登録しました。'
       redirect_to @user
     else
@@ -33,6 +37,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :image, :x, :y, :width, :height)
   end
 end

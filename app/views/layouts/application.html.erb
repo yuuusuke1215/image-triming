@@ -6,6 +6,7 @@
     <title>Microposts</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 
@@ -22,7 +23,13 @@
 
     <div class="container">
       <%= render 'layouts/flash_messages' %>
-
+      
+      <h1>Ajax#index</h1>
+      <p id="hoge">赤色になるよ</p>
+      
+      <script>
+        $("#hoge").css("color","red")
+      </script>
       <%= yield %>
     </div>
   </body>

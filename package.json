@@ -1,5 +1,9 @@
 {
   "name": "image-trimings",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "cropperjs": "^1.5.6",
+    "jquery": "^3.4.1",
+    "jquery-cropper": "^1.0.1"
+  }
 }

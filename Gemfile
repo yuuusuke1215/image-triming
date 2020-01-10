@@ -55,3 +55,9 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'kaminari'
+
+gem 'mini_magick', '~> 4.9'
+
+gem 'jquery-rails'
+
+gem 'turbolinks', '~> 5'
